@@ -1,0 +1,229 @@
+opc1=0
+opc2=0
+CantEntSilver=50
+CantEntGold=30
+CantEntPlatinium=20
+Bucatas=[["1",0,0],["2",1,0],["3",2,0],["4",3,0],["5",4,0],["6",5,0],["7",6,0],["8",7,0],["9",8,0],["10",9,0],
+         ["11",10,0],["12",11,0],["13",12,0],["14",13,0],["15",14,0],["16",15,0],["17",16,0],["18",17,0],["19",18,0],["12",19,0],
+         ["21",20,0],["22",21,0],["23",22,0],["24",23,0],["25",24,0],["26",25,0],["27",26,0],["28",27,0],["29",28,0],["30",29,0],
+         ["31",30,0],["32",31,0],["33",32,0],["34",33,0],["35",34,0],["36",35,0],["37",36,0],["38",37,0],["39",38,0],["40",39,0],
+         ["41",40,0],["42",41,0],["43",42,0],["44",43,0],["45",44,0],["46",45,0],["47",46,0],["48",47,0],["49",48,0],["50",49,0],
+         ["51",50,0],["52",51,0],["53",52,0],["54",53,0],["55",54,0],["56",55,0],["57",56,0],["58",57,0],["59",58,0],["60",59,0],
+         ["61",60,0],["62",61,0],["63",62,0],["64",63,0],["65",64,0],["66",65,0],["67",66,0],["68",67,0],["69",68,0],["70",69,0],
+         ["71",70,0],["72",71,0],["73",72,0],["74",73,0],["75",74,0],["76",75,0],["77",76,0],["78",77,0],["79",78,0],["80",79,0],
+         ["81",80,0],["82",81,0],["83",82,0],["84",83,0],["85",84,0],["86",85,0],["87",86,0],["88",87,0],["89",88,0],["90",89,0],
+         ["91",90,0],["92",91,0],["93",92,0],["94",93,0],["95",94,0],["96",95,0],["97",96,0],["98",97,0],["99",98,0],["100",99,0]]
+ListAsist=[]
+Asist=[]
+CantEnt=0
+Puesto=0
+PuestoList=0
+Plat=0
+Gold=0
+Silver=0
+print(Bucatas[45][0])
+print("-------------------------------------------------------------------------")
+print("Bienvenido al sistema de compras de entradas para el concierto del gran:\n¡¡¡Micheal Jam!!!")
+print("-------------------------------------------------------------------------")
+while opc1<1 or opc1>6:
+    print()
+    print("[1]Comprar entradas")
+    print("[2]Mostrar ubicaciones disponibles")
+    print("[3]Ver listado de asistentes")
+    print("[4]Mostrar ganancias totales")
+    print("[5]Salir")
+    print()
+    opc1=int(input("Ingrese la opcion que desea elegir: "))
+    if opc1==1:
+        print()
+        print("-.Ha seleccionado [1]Comprar entradas.-")
+        print()
+        while opc2<1 or opc2>4:
+            print("Tenemos disponible las siguientes categorias de entrada:")
+            print()
+            print("[1]Platinium: $120.000 c/u")
+            print("[2]Gold: $80.000 c/u")
+            print("[3]Silver: $50.000 c/u")
+            print()
+            opc2=int(input("Ingrese la opción que desea comprar: "))
+            if opc2==1:
+                if CantEntPlatinium>0:
+                    print()
+                    print(f"Quedan {CantEntPlatinium} entradas [1]Platinium")
+                    print()
+                    while CantEnt<1 or CantEnt>4:
+                        print("Selecciono la entrada [1]Platinium: $120.000 ")
+                        CantEnt=int(input("Indique la cantidad de entradas que desea comprar (Maximo 3 entradas): "))
+                    else:
+                        print("Cantidad invalida!!!")
+                    while CantEnt>0:
+                        print("")
+                        while Puesto<0 or Puesto>25:
+                            print("Los puestos disponibles:")
+                            print(f"{Bucatas[0][0]} {Bucatas[1][0]} {Bucatas[2][0]} {Bucatas[3][0]} {Bucatas[4][0]} {Bucatas[5][0]} {Bucatas[6][0]} {Bucatas[7][0]} {Bucatas[8][0]} {Bucatas[9][0]}")
+                            print(f"{Bucatas[10][0]} {Bucatas[11][0]} {Bucatas[12][0]} {Bucatas[13][0]} {Bucatas[14][0]} {Bucatas[15][0]} {Bucatas[16][0]} {Bucatas[17][0]} {Bucatas[18][0]} {Bucatas[19][0]}")
+                            print(f"{Bucatas[20][0]} {Bucatas[21][0]} {Bucatas[22][0]} {Bucatas[23][0]} {Bucatas[24][0]} {Bucatas[25][0]} {Bucatas[26][0]} {Bucatas[27][0]} {Bucatas[28][0]} {Bucatas[29][0]}")
+                            print(f"{Bucatas[30][0]} {Bucatas[31][0]} {Bucatas[32][0]} {Bucatas[33][0]} {Bucatas[34][0]} {Bucatas[35][0]} {Bucatas[36][0]} {Bucatas[37][0]} {Bucatas[38][0]} {Bucatas[39][0]}")
+                            print(f"{Bucatas[40][0]} {Bucatas[41][0]} {Bucatas[42][0]} {Bucatas[43][0]} {Bucatas[44][0]} {Bucatas[45][0]} {Bucatas[46][0]} {Bucatas[47][0]} {Bucatas[48][0]} {Bucatas[49][0]}")
+                            print(f"{Bucatas[50][0]} {Bucatas[51][0]} {Bucatas[52][0]} {Bucatas[53][0]} {Bucatas[54][0]} {Bucatas[55][0]} {Bucatas[56][0]} {Bucatas[57][0]} {Bucatas[58][0]} {Bucatas[59][0]}")
+                            print(f"{Bucatas[60][0]} {Bucatas[61][0]} {Bucatas[62][0]} {Bucatas[63][0]} {Bucatas[64][0]} {Bucatas[65][0]} {Bucatas[66][0]} {Bucatas[67][0]} {Bucatas[68][0]} {Bucatas[69][0]}")
+                            print(f"{Bucatas[70][0]} {Bucatas[71][0]} {Bucatas[72][0]} {Bucatas[73][0]} {Bucatas[74][0]} {Bucatas[75][0]} {Bucatas[76][0]} {Bucatas[77][0]} {Bucatas[78][0]} {Bucatas[79][0]}")
+                            print(f"{Bucatas[80][0]} {Bucatas[81][0]} {Bucatas[82][0]} {Bucatas[83][0]} {Bucatas[84][0]} {Bucatas[85][0]} {Bucatas[86][0]} {Bucatas[87][0]} {Bucatas[88][0]} {Bucatas[89][0]}")
+                            print(f"{Bucatas[90][0]} {Bucatas[91][0]} {Bucatas[92][0]} {Bucatas[93][0]} {Bucatas[94][0]} {Bucatas[95][0]} {Bucatas[96][0]} {Bucatas[97][0]} {Bucatas[98][0]} {Bucatas[99][0]}")
+                            print()
+                            Puesto=int(input("Ingrese el número de la bucata donde desea sentarse(1 al 25): "))
+                            PuestoList=Puesto-1
+                        if Bucatas[PuestoList][2]==0:
+                            Bucatas[PuestoList][0]="x"
+                            print("Ha tomado el puesto con exito!!")
+                        elif Bucatas[PuestoList][2]==1:
+                            print("El puesto se encuentra tomado")
+                        print()
+                        Rut=str(input("Ingrese su rut sin puntos ni guion:\n"))
+                        print()
+                        Nombre=str(input("Ingrese su nombre:\n"))
+                        print()
+                        Asist=[Puesto,Rut,Nombre]
+                        ListAsist.append(Asist)
+                        Puesto=0
+                        Rut=0
+                        Nombre=0
+                        CantEnt=CantEnt-1
+                    CantEntPlatinium=CantEntPlatinium-1
+                    Plat=Plat+1
+                elif CantEntPlatinium==0:
+                    print("NO QUEDAN ENTRADAS")
+                print("Ha comprado sus entradas con existo!!")
+            elif opc2==2:
+                if CantEntGold>0:
+                    print()
+                    print(f"Quedan {CantEntGold} entradas [2]Gold")
+                    print()
+                    while CantEnt<1 or CantEnt>4:
+                        print("Selecciono la entrada [2]Gold: $80.000 ")
+                        CantEnt=int(input("Indique la cantidad de entradas que desea comprar (Maximo 3 entradas): "))
+                    else:
+                        print("Cantidad invalida!!!")
+                    while CantEnt>0:
+                        print("")
+                        while Puesto<21 or Puesto>50:
+                            print("Los puestos disponibles:")
+                            print(f"{Bucatas[0][0]} {Bucatas[1][0]} {Bucatas[2][0]} {Bucatas[3][0]} {Bucatas[4][0]} {Bucatas[5][0]} {Bucatas[6][0]} {Bucatas[7][0]} {Bucatas[8][0]} {Bucatas[9][0]}")
+                            print(f"{Bucatas[10][0]} {Bucatas[11][0]} {Bucatas[12][0]} {Bucatas[13][0]} {Bucatas[14][0]} {Bucatas[15][0]} {Bucatas[16][0]} {Bucatas[17][0]} {Bucatas[18][0]} {Bucatas[19][0]}")
+                            print(f"{Bucatas[20][0]} {Bucatas[21][0]} {Bucatas[22][0]} {Bucatas[23][0]} {Bucatas[24][0]} {Bucatas[25][0]} {Bucatas[26][0]} {Bucatas[27][0]} {Bucatas[28][0]} {Bucatas[29][0]}")
+                            print(f"{Bucatas[30][0]} {Bucatas[31][0]} {Bucatas[32][0]} {Bucatas[33][0]} {Bucatas[34][0]} {Bucatas[35][0]} {Bucatas[36][0]} {Bucatas[37][0]} {Bucatas[38][0]} {Bucatas[39][0]}")
+                            print(f"{Bucatas[40][0]} {Bucatas[41][0]} {Bucatas[42][0]} {Bucatas[43][0]} {Bucatas[44][0]} {Bucatas[45][0]} {Bucatas[46][0]} {Bucatas[47][0]} {Bucatas[48][0]} {Bucatas[49][0]}")
+                            print(f"{Bucatas[50][0]} {Bucatas[51][0]} {Bucatas[52][0]} {Bucatas[53][0]} {Bucatas[54][0]} {Bucatas[55][0]} {Bucatas[56][0]} {Bucatas[57][0]} {Bucatas[58][0]} {Bucatas[59][0]}")
+                            print(f"{Bucatas[60][0]} {Bucatas[61][0]} {Bucatas[62][0]} {Bucatas[63][0]} {Bucatas[64][0]} {Bucatas[65][0]} {Bucatas[66][0]} {Bucatas[67][0]} {Bucatas[68][0]} {Bucatas[69][0]}")
+                            print(f"{Bucatas[70][0]} {Bucatas[71][0]} {Bucatas[72][0]} {Bucatas[73][0]} {Bucatas[74][0]} {Bucatas[75][0]} {Bucatas[76][0]} {Bucatas[77][0]} {Bucatas[78][0]} {Bucatas[79][0]}")
+                            print(f"{Bucatas[80][0]} {Bucatas[81][0]} {Bucatas[82][0]} {Bucatas[83][0]} {Bucatas[84][0]} {Bucatas[85][0]} {Bucatas[86][0]} {Bucatas[87][0]} {Bucatas[88][0]} {Bucatas[89][0]}")
+                            print(f"{Bucatas[90][0]} {Bucatas[91][0]} {Bucatas[92][0]} {Bucatas[93][0]} {Bucatas[94][0]} {Bucatas[95][0]} {Bucatas[96][0]} {Bucatas[97][0]} {Bucatas[98][0]} {Bucatas[99][0]}")
+                            print()
+                            Puesto=int(input("Ingrese el número de la bucata donde desea sentarse(21 al 50): "))
+                            PuestoList=Puesto-1
+                        if Bucatas[PuestoList][2]==0:
+                            Bucatas[PuestoList][0]="x"
+                            print("Ha tomado el puesto con exito!!")
+                        elif Bucatas[PuestoList][2]==1:
+                            print("El puesto se encuentra tomado")
+                        print()
+                        Rut=str(input("Ingrese su rut sin puntos ni guion:\n"))
+                        print()
+                        Nombre=str(input("Ingrese su nombre:\n"))
+                        print()
+                        Asist=[Puesto,Rut,Nombre]
+                        ListAsist.append(Asist)
+                        Puesto=0
+                        Rut=0
+                        Nombre=0
+                        CantEnt=CantEnt-1
+                    CantEntGold=CantEntGold-1
+                    Gold=Gold+1
+                elif CantEntGold==0:
+                    print("NO QUEDAN ENTRADAS")
+                print("Ha comprado sus entradas con existo!!")
+            elif opc2==3:
+                if CantEntSilver>0:
+                    print()
+                    print(f"Quedan {CantEntSilver} entradas [3]Silver")
+                    print()
+                    while CantEnt<1 or CantEnt>4:
+                        print("Selecciono la entrada [3]Silver: $50.000 ")
+                        CantEnt=int(input("Indique la cantidad de entradas que desea comprar (Maximo 3 entradas): "))
+                    else:
+                        print("Cantidad invalida!!!")
+                    while CantEnt>0:
+                        print("")
+                        while Puesto<51 or Puesto>100:
+                            print("Los puestos disponibles:")
+                            print(f"{Bucatas[0][0]} {Bucatas[1][0]} {Bucatas[2][0]} {Bucatas[3][0]} {Bucatas[4][0]} {Bucatas[5][0]} {Bucatas[6][0]} {Bucatas[7][0]} {Bucatas[8][0]} {Bucatas[9][0]}")
+                            print(f"{Bucatas[10][0]} {Bucatas[11][0]} {Bucatas[12][0]} {Bucatas[13][0]} {Bucatas[14][0]} {Bucatas[15][0]} {Bucatas[16][0]} {Bucatas[17][0]} {Bucatas[18][0]} {Bucatas[19][0]}")
+                            print(f"{Bucatas[20][0]} {Bucatas[21][0]} {Bucatas[22][0]} {Bucatas[23][0]} {Bucatas[24][0]} {Bucatas[25][0]} {Bucatas[26][0]} {Bucatas[27][0]} {Bucatas[28][0]} {Bucatas[29][0]}")
+                            print(f"{Bucatas[30][0]} {Bucatas[31][0]} {Bucatas[32][0]} {Bucatas[33][0]} {Bucatas[34][0]} {Bucatas[35][0]} {Bucatas[36][0]} {Bucatas[37][0]} {Bucatas[38][0]} {Bucatas[39][0]}")
+                            print(f"{Bucatas[40][0]} {Bucatas[41][0]} {Bucatas[42][0]} {Bucatas[43][0]} {Bucatas[44][0]} {Bucatas[45][0]} {Bucatas[46][0]} {Bucatas[47][0]} {Bucatas[48][0]} {Bucatas[49][0]}")
+                            print(f"{Bucatas[50][0]} {Bucatas[51][0]} {Bucatas[52][0]} {Bucatas[53][0]} {Bucatas[54][0]} {Bucatas[55][0]} {Bucatas[56][0]} {Bucatas[57][0]} {Bucatas[58][0]} {Bucatas[59][0]}")
+                            print(f"{Bucatas[60][0]} {Bucatas[61][0]} {Bucatas[62][0]} {Bucatas[63][0]} {Bucatas[64][0]} {Bucatas[65][0]} {Bucatas[66][0]} {Bucatas[67][0]} {Bucatas[68][0]} {Bucatas[69][0]}")
+                            print(f"{Bucatas[70][0]} {Bucatas[71][0]} {Bucatas[72][0]} {Bucatas[73][0]} {Bucatas[74][0]} {Bucatas[75][0]} {Bucatas[76][0]} {Bucatas[77][0]} {Bucatas[78][0]} {Bucatas[79][0]}")
+                            print(f"{Bucatas[80][0]} {Bucatas[81][0]} {Bucatas[82][0]} {Bucatas[83][0]} {Bucatas[84][0]} {Bucatas[85][0]} {Bucatas[86][0]} {Bucatas[87][0]} {Bucatas[88][0]} {Bucatas[89][0]}")
+                            print(f"{Bucatas[90][0]} {Bucatas[91][0]} {Bucatas[92][0]} {Bucatas[93][0]} {Bucatas[94][0]} {Bucatas[95][0]} {Bucatas[96][0]} {Bucatas[97][0]} {Bucatas[98][0]} {Bucatas[99][0]}")
+                            print()
+                            Puesto=int(input("Ingrese el número de la bucata donde desea sentarse(51 a 100): "))
+                            PuestoList=Puesto-1
+                        if Bucatas[PuestoList][2]==0:
+                            Bucatas[PuestoList][0]="x"
+                            print("Ha tomado el puesto con exito!!")
+                        elif Bucatas[PuestoList][2]==1:
+                            print("El puesto se encuentra tomado")
+                        print()
+                        Rut=str(input("Ingrese su rut sin puntos ni guion:\n"))
+                        print()
+                        Nombre=str(input("Ingrese su nombre:\n"))
+                        print()
+                        Asist=[Puesto,Rut,Nombre]
+                        ListAsist.append(Asist)
+                        Puesto=0
+                        Rut=0
+                        Nombre=0
+                        CantEnt=CantEnt-1
+                    CantEntSilver=CantEntSilver-1
+                    Silver=Silver+1          
+                elif CantEntSilver==0:
+                    print("NO QUEDAN ENTRADAS")
+                print("Ha comprado sus entradas con existo!!")
+            opc1=0
+    elif opc1==2:
+        print("Estos son los puestos disponibles:")
+        print(f"{Bucatas[0][0]} {Bucatas[1][0]} {Bucatas[2][0]} {Bucatas[3][0]} {Bucatas[4][0]} {Bucatas[5][0]} {Bucatas[6][0]} {Bucatas[7][0]} {Bucatas[8][0]} {Bucatas[9][0]}")
+        print(f"{Bucatas[10][0]} {Bucatas[11][0]} {Bucatas[12][0]} {Bucatas[13][0]} {Bucatas[14][0]} {Bucatas[15][0]} {Bucatas[16][0]} {Bucatas[17][0]} {Bucatas[18][0]} {Bucatas[19][0]}")
+        print(f"{Bucatas[20][0]} {Bucatas[21][0]} {Bucatas[22][0]} {Bucatas[23][0]} {Bucatas[24][0]} {Bucatas[25][0]} {Bucatas[26][0]} {Bucatas[27][0]} {Bucatas[28][0]} {Bucatas[29][0]}")
+        print(f"{Bucatas[30][0]} {Bucatas[31][0]} {Bucatas[32][0]} {Bucatas[33][0]} {Bucatas[34][0]} {Bucatas[35][0]} {Bucatas[36][0]} {Bucatas[37][0]} {Bucatas[38][0]} {Bucatas[39][0]}")
+        print(f"{Bucatas[40][0]} {Bucatas[41][0]} {Bucatas[42][0]} {Bucatas[43][0]} {Bucatas[44][0]} {Bucatas[45][0]} {Bucatas[46][0]} {Bucatas[47][0]} {Bucatas[48][0]} {Bucatas[49][0]}")
+        print(f"{Bucatas[50][0]} {Bucatas[51][0]} {Bucatas[52][0]} {Bucatas[53][0]} {Bucatas[54][0]} {Bucatas[55][0]} {Bucatas[56][0]} {Bucatas[57][0]} {Bucatas[58][0]} {Bucatas[59][0]}")
+        print(f"{Bucatas[60][0]} {Bucatas[61][0]} {Bucatas[62][0]} {Bucatas[63][0]} {Bucatas[64][0]} {Bucatas[65][0]} {Bucatas[66][0]} {Bucatas[67][0]} {Bucatas[68][0]} {Bucatas[69][0]}")
+        print(f"{Bucatas[70][0]} {Bucatas[71][0]} {Bucatas[72][0]} {Bucatas[73][0]} {Bucatas[74][0]} {Bucatas[75][0]} {Bucatas[76][0]} {Bucatas[77][0]} {Bucatas[78][0]} {Bucatas[79][0]}")
+        print(f"{Bucatas[80][0]} {Bucatas[81][0]} {Bucatas[82][0]} {Bucatas[83][0]} {Bucatas[84][0]} {Bucatas[85][0]} {Bucatas[86][0]} {Bucatas[87][0]} {Bucatas[88][0]} {Bucatas[89][0]}")
+        print(f"{Bucatas[90][0]} {Bucatas[91][0]} {Bucatas[92][0]} {Bucatas[93][0]} {Bucatas[94][0]} {Bucatas[95][0]} {Bucatas[96][0]} {Bucatas[97][0]} {Bucatas[98][0]} {Bucatas[99][0]}")
+        opc1=0
+    elif opc1==3:
+        print("Este es el listado de los asistentes al evento(Este se va actualizando según mas asistente se sumen)")
+        for Asist in ListAsist:
+            print(f"Puesto: {Asist[0]}")
+            print(f"Rut: {Asist[1]}")
+            print(f"Nombre: {Asist[2]}")
+        opc1=0
+    elif opc1==4:
+        print("El total recaudado es el siguiente:")
+        TotalPlat=120000*Plat
+        TotalGold=80000*Gold
+        TotalSilver=50000*Silver
+        Total=TotalPlat+TotalGold+TotalSilver
+        print(f"Total entradas Platinium: ${TotalPlat}")
+        print(f"Total entradas Gold: ${TotalGold}")
+        print(f"Total entradas Silver: ${TotalSilver}")
+        print(f"El total de las entradas en general es: {Total}")
+        opc1==0
+    elif opc1==5:
+        print("Muchas gracias por utilizar el sistema de compras de eventos de Héctor Aliaga!!!")
+        print(f"Puesto: {Asist[0]}")
+        print(f"Rut: {Asist[1]}")
+        print(f"Nombre: {Asist[2]}")
